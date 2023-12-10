@@ -3,6 +3,8 @@ import Navbar from "./_components/navbar";
 import { Urbanist } from "next/font/google";
 import { cn } from "~/lib/utils";
 import { Button } from "./_components/ui/button";
+import CommunityCard from "./_components/community-card";
+import EventCard from "./_components/event-card";
 
 const urbanist = Urbanist({ weight: "800", subsets: ["latin"] });
 
@@ -10,42 +12,42 @@ export default async function Home() {
   const communities = [
     {
       title: "🖼️ Arts & Culture Club",
-      href: "",
+      href: "/art",
       color: "bg-gray-100",
     },
     {
       title: "✍🏻 Writing Club",
-      href: "",
+      href: "/writing",
       color: "bg-blue-100",
     },
     {
       title: "🏳️‍🌈 Pride Zone",
-      href: "",
+      href: "/pride",
       color: "bg-pink-100",
     },
     {
       title: "⛰️ Hiking",
-      href: "",
+      href: "/hiking",
       color: "bg-green-50",
     },
     {
       title: "🍳 Cooking Club",
-      href: "",
+      href: "/cooking",
       color: "bg-yellow-50",
     },
     {
       title: "👸🏽 Mujeres Group",
-      href: "",
+      href: "/muejeres",
       color: "bg-purple-100",
     },
     {
       title: "🚺 Women Over 50",
-      href: "",
+      href: "/women-over-50",
       color: "bg-amber-50",
     },
     {
       title: "🚴🏻‍♀️ Cycling Club",
-      href: "",
+      href: "/cycling",
       color: "bg-gray-100",
     },
   ];
@@ -53,7 +55,37 @@ export default async function Home() {
     <main className="flex flex-col items-center">
       <Navbar />
       {/* Hero section */}
-      <div className="flex flex-col items-center p-24 pb-96">
+      <div className="relative -z-10 w-[1500px]">
+        <Image
+          src="/bubble1.png"
+          height={200}
+          width={200}
+          alt="Bubble1"
+          className="absolute left-[450px] top-20 -z-10 lg:left-12"
+        />
+        <Image
+          src="/bubble2.png"
+          height={150}
+          width={150}
+          alt="Bubble2"
+          className="absolute left-[480px] top-[450px] -z-10"
+        />
+        <Image
+          src="/bubble3.png"
+          height={250}
+          width={250}
+          alt="Bubble3"
+          className="absolute right-96 top-[450px] -z-10 lg:right-96"
+        />
+        <Image
+          src="/bubble4.png"
+          height={200}
+          width={200}
+          alt="Bubble4"
+          className="absolute right-[450px] top-32 -z-10 lg:right-10"
+        />
+      </div>
+      <div className="relative flex w-full flex-col items-center p-24 pb-96">
         <Image
           src="/logo.png"
           height={120}
@@ -79,55 +111,41 @@ export default async function Home() {
           alt="Hero Swish"
           className="absolute -z-50"
         />
-        <Image
-          src="/bubble1.png"
-          height={200}
-          width={200}
-          alt="Bubble1"
-          className="absolute left-0 -z-10"
-        />
-        <Image
-          src="/bubble2.png"
-          height={150}
-          width={150}
-          alt="Bubble2"
-          className="absolute bottom-48 left-96 -z-10"
-        />
-        <Image
-          src="/bubble3.png"
-          height={250}
-          width={250}
-          alt="Bubble3"
-          className="absolute bottom-44 right-60 -z-10"
-        />
-        <Image
-          src="/bubble4.png"
-          height={200}
-          width={200}
-          alt="Bubble4"
-          className="absolute right-10 top-32 -z-10"
-        />
       </div>
       {/* Communities section */}
-      <div className="flex w-full flex-col items-center pb-52">
+      <div className="flex w-full flex-col items-center pb-32">
         <h1 className={cn("mb-8 text-center text-6xl", urbanist.className)}>
           FIND YOUR COMMUNITY
         </h1>
         <div className="mb-8 flex w-4/6 flex-wrap justify-center gap-4">
           {/* TODO: ADD LINK TO COMMUNITIES */}
-          {communities.map((community, index) => (
-            <div
-              key={index}
-              className={cn(
-                "flex items-center justify-center rounded-full px-4 py-3",
-                community.color,
-              )}
-            >
-              {community.title}
-            </div>
+          {communities.map((community) => (
+            <CommunityCard
+              title={community.title}
+              href={community.href}
+              color={community.color}
+            />
           ))}
         </div>
         <Button>View all communities</Button>
+      </div>
+      {/* Events section */}
+      <div className="flex w-full flex-col">
+        <div className="flex justify-between px-28">
+          <h1 className={cn("mb-8 text-center text-6xl", urbanist.className)}>
+            SEE WHAT'S HAPPENING
+          </h1>
+          <Button>View all events</Button>
+        </div>
+        <div className="flex gap-3">
+          <EventCard
+            title="F*ck the Small Talk"
+            author="Epic Llama"
+            location="Secret Location"
+            src="/ftst.png"
+            description="F*ck the Small Talk is an out-of-the-box social experience where strangers come together for an evening of meaningful, deep, & curious conversations!"
+          />
+        </div>
       </div>
     </main>
   );
