@@ -24,7 +24,7 @@ const navItems = [
 
 const Navbar = () => {
   return (
-    <div className="flex h-16 w-full items-center justify-between p-6">
+    <div className="fixed flex h-16 w-full items-center justify-between bg-white p-6">
       <Logo />
       <div className="flex items-center gap-8">
         {navItems.map((item, index) => (
