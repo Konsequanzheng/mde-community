@@ -1,6 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Button } from "./ui/button";
+import Logo from "./logo";
 
 const navItems = [
   {
@@ -19,30 +20,21 @@ const navItems = [
     title: "Blog",
     href: "/blog",
   },
-  {
-    title: "Donate",
-    href: "/donate",
-  },
 ];
 
 const Navbar = () => {
   return (
-    <div className="flex h-16 w-full items-center justify-between p-5 pt-5 text-xl text-black">
-      <div className="flex items-center gap-3">
-        <Image
-          src="/logo-full.png"
-          alt="MDE Community Logo"
-          width={50}
-          height={50}
-        />
-        <div>MDE Community</div>
-      </div>
-      <div className="flex gap-3">
+    <div className="flex h-16 w-full items-center justify-between p-6">
+      <Logo />
+      <div className="flex items-center gap-8">
         {navItems.map((item, index) => (
           <Link key={index} href={item.href}>
             <div>{item.title}</div>
           </Link>
         ))}
+        <Button asChild>
+          <Link href={"/donate"}>Donate</Link>
+        </Button>
       </div>
     </div>
   );
