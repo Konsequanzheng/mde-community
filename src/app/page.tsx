@@ -138,13 +138,13 @@ export default async function Home() {
           <Button>View all events</Button>
         </div>
         <div className="flex gap-3">
-          <EventCard
+          {/* <EventCard
             title="F*ck the Small Talk"
             author="Epic Llama"
             location="Secret Location"
             src="/ftst.png"
             description="F*ck the Small Talk is an out-of-the-box social experience where strangers come together for an evening of meaningful, deep, & curious conversations!"
-          />
+          /> */}
         </div>
       </div>
     </main>
