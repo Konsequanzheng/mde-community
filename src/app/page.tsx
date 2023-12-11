@@ -174,6 +174,7 @@ export default async function Home() {
           {/* TODO: ADD LINK TO COMMUNITIES */}
           {communities.map((community) => (
             <CommunityCard
+              key={community.title}
               title={community.title}
               href={community.href}
               color={community.color}
@@ -194,8 +195,9 @@ export default async function Home() {
           {/* <Button>View all events</Button> */}
         </div>
         <div className="flex flex-wrap justify-center gap-3 xl:px-64">
-          {events.map((event) => (
+          {events.map((event, index) => (
             <ContentCard
+              key={index}
               title={event.title}
               src={event.src}
               tags={event.tags}
@@ -218,8 +220,9 @@ export default async function Home() {
           THE ULTIMATE MEDELLIN GUIDE 🇨🇴
         </h1>
         <div className="flex flex-wrap justify-center gap-3">
-          {events.map((event) => (
+          {events.map((event, index) => (
             <ContentCard
+              key={index}
               title={event.title}
               src={event.src}
               tags={event.tags}
@@ -276,10 +279,17 @@ export default async function Home() {
             className="rounded-md"
           />
         </div>
-        <Swish className="absolute -z-50" />
+        <Image
+          src="/hero-swish.svg"
+          height={2000}
+          width={2000}
+          alt="Hero Swish"
+          className="absolute -z-50"
+        />
+        {/* <Swish className="absolute -z-50" /> */}
       </div>
       {/* Newsletter section */}
-      <div className="flex max-w-xl justify-center p-10">
+      <div className="flex max-w-xl justify-center p-5">
         <div className="flex flex-col items-center gap-5 rounded-3xl bg-[#CB525D] p-16 text-white">
           <div className="text-4xl">👋🏽👋🏻👋🏾👋🏼👋🏿</div>
           <div className={cn("text-center text-3xl", roboto.className)}>

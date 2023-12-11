@@ -7,7 +7,7 @@ import { Menu } from "lucide-react";
 const MobileTopBar = () => {
   return (
     <Sheet>
-      <SheetTrigger>
+      <SheetTrigger className="sm:hidden">
         <Menu size={30} />
       </SheetTrigger>
       <SheetContent side="top">
