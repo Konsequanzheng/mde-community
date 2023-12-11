@@ -248,7 +248,10 @@ export default async function Home() {
         </h1>
       </div>
       {/* Donate section */}
-      <div className="flex flex-wrap-reverse items-center justify-center gap-10 p-12">
+      <div
+        id="donate"
+        className="flex flex-wrap-reverse items-center justify-center gap-10 p-12"
+      >
         <div className="flex max-w-[580px] flex-col">
           <h1 className={cn("text-4xl lg:text-6xl", urbanist.className)}>
             YOUR SUPPORT
