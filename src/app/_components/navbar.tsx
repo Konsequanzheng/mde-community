@@ -6,29 +6,29 @@ import Logo from "./logo";
 const navItems = [
   {
     title: "Home",
-    href: "/",
+    href: "#home",
   },
   {
     title: "Communities",
-    href: "/communities",
+    href: "#communities",
   },
   {
     title: "Events",
-    href: "/events",
+    href: "#events",
   },
   {
     title: "Blog",
-    href: "/blog",
+    href: "#blog",
   },
 ];
 
 const Navbar = () => {
   return (
-    <div className="fixed flex h-16 w-full items-center justify-between bg-white p-6">
+    <div className="fixed z-50 flex h-fit w-full items-center justify-between bg-white p-4">
       <Logo />
       <div className="flex items-center gap-8">
         {navItems.map((item, index) => (
-          <Link key={index} href={item.href}>
+          <Link key={index} href={item.href} scroll={true}>
             <div>{item.title}</div>
           </Link>
         ))}

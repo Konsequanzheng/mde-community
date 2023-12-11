@@ -5,6 +5,7 @@ import { cookies } from "next/headers";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import { cn } from "~/lib/utils";
+import { TailwindIndicator } from "./_components/tailwind-indicator";
 
 const roboto = Roboto({
   weight: ["400"],
@@ -23,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth ">
       <body
         className={cn(
           "bg-background min-h-screen font-sans antialiased",
@@ -33,6 +34,7 @@ export default function RootLayout({
         <TRPCReactProvider cookies={cookies().toString()}>
           {children}
         </TRPCReactProvider>
+        <TailwindIndicator />
       </body>
     </html>
   );
