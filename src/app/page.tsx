@@ -3,59 +3,15 @@ import Navbar from "./_components/navbar";
 import { Roboto, Urbanist } from "next/font/google";
 import { cn } from "~/lib/utils";
 import { Button } from "./_components/ui/button";
-import CommunityCard from "./_components/community-card";
+import CommunityCards from "./_components/community-cards";
 import ContentCard from "./_components/content-card";
 import Link from "next/link";
-import Swish from "./_components/swish";
 import { Input } from "./_components/ui/input";
 
 const urbanist = Urbanist({ weight: "800", subsets: ["latin"] });
 const roboto = Roboto({ weight: "700", subsets: ["latin"] });
 
 export default async function Home() {
-  const communities = [
-    {
-      title: "🖼️ Arts & Culture Club",
-      href: "/art",
-      color: "bg-gray-100",
-    },
-    {
-      title: "✍🏻 Writing Club",
-      href: "/writing",
-      color: "bg-blue-100",
-    },
-    {
-      title: "🏳️‍🌈 Pride Zone",
-      href: "/pride",
-      color: "bg-pink-100",
-    },
-    {
-      title: "⛰️ Hiking",
-      href: "/hiking",
-      color: "bg-green-50",
-    },
-    {
-      title: "🍳 Cooking Club",
-      href: "/cooking",
-      color: "bg-yellow-50",
-    },
-    {
-      title: "👸🏽 Mujeres Group",
-      href: "/muejeres",
-      color: "bg-purple-100",
-    },
-    {
-      title: "🚺 Women Over 50",
-      href: "/women-over-50",
-      color: "bg-amber-50",
-    },
-    {
-      title: "🚴🏻‍♀️ Cycling Club",
-      href: "/cycling",
-      color: "bg-gray-100",
-    },
-  ];
-
   const events = [
     {
       title: "F*ck the Small Talk",
@@ -99,7 +55,7 @@ export default async function Home() {
           height={280}
           width={280}
           alt="Bubble1"
-          className="absolute left-[300px] top-16 -z-10 sm:left-[280px] md:left-[100px] lg:left-24"
+          className="absolute left-[300px] top-24 -z-10 sm:left-[280px] md:left-[100px] lg:left-24"
         />
         <Image
           src="/bubble2.png"
@@ -170,20 +126,11 @@ export default async function Home() {
         >
           FIND YOUR COMMUNITY
         </h1>
-        <div className="mb-8 flex w-4/6 max-w-[800px] flex-wrap justify-center gap-4">
-          {/* TODO: ADD LINK TO COMMUNITIES */}
-          {communities.map((community) => (
-            <CommunityCard
-              key={community.title}
-              title={community.title}
-              href={community.href}
-              color={community.color}
-            />
-          ))}
-        </div>
-        {/* TODO: Implement all communities page */}
-        {/* <Button>View all communities</Button> */}
+
+        <CommunityCards />
       </div>
+      {/* TODO: Implement all communities page */}
+      {/* <Button>View all communities</Button> */}
       {/* Events section */}
       <div id="events" className="flex w-full flex-col pb-32">
         {/* <div className="flex justify-between px-12 py-3 lg:px-64"> */}
