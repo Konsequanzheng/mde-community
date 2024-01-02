@@ -1,12 +1,11 @@
 import Image from "next/image";
-import Navbar from "./_components/navbar";
 import { Roboto, Urbanist } from "next/font/google";
 import { cn } from "~/lib/utils";
-import { Button } from "./_components/ui/button";
-import CommunityCards from "./_components/community-cards";
-import ContentCard from "./_components/content-card";
+import { Button } from "../_components/ui/button";
+import CommunityCards from "../_components/community-cards";
+import ContentCard from "../_components/content-card";
 import Link from "next/link";
-import { Input } from "./_components/ui/input";
+import { Input } from "../_components/ui/input";
 
 const urbanist = Urbanist({ weight: "800", subsets: ["latin"] });
 const roboto = Roboto({ weight: "700", subsets: ["latin"] });
@@ -47,7 +46,6 @@ export default async function Home() {
 
   return (
     <main className="flex flex-col items-center overflow-clip">
-      <Navbar />
       {/* Hero section */}
       <div id="home" className="relative -z-10 w-[1500px]">
         <Image
@@ -134,8 +132,8 @@ export default async function Home() {
       {/* Events section */}
       <div id="events" className="flex w-full flex-col pb-32">
         {/* <div className="flex justify-between px-12 py-3 lg:px-64"> */}
-        <div className="flex justify-center py-3">
-          <h1 className={cn("mb-8 text-4xl md:text-6xl", urbanist.className)}>
+        <div className="mb-8 flex items-center justify-center">
+          <h1 className={cn("pr-8 text-4xl md:text-6xl", urbanist.className)}>
             SEE WHAT'S HAPPENING
           </h1>
           {/* TODO: Implement all events page */}
@@ -158,14 +156,15 @@ export default async function Home() {
       </div>
       {/* Blog section */}
       <div id="blog" className="flex w-full flex-col justify-center pb-32">
-        <h1
-          className={cn(
-            "mb-8 p-8 text-center text-4xl md:text-6xl",
-            urbanist.className,
-          )}
-        >
-          THE ULTIMATE MEDELLIN GUIDE 🇨🇴
-        </h1>
+        <div className="mb-8 flex items-center justify-center">
+          <h1 className={cn("pr-8 text-4xl md:text-6xl", urbanist.className)}>
+            THE ULTIMATE MEDELLIN GUIDE 🇨🇴
+          </h1>
+
+          {/* <Link href={"/wiki"}>
+            <Button>See more</Button>
+          </Link> */}
+        </div>
         <div className="flex flex-wrap justify-center gap-3">
           {events.map((event, index) => (
             <ContentCard

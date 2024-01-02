@@ -7,7 +7,7 @@ import NavItems from "~/lib/nav-items";
 
 const Navbar = () => {
   return (
-    <div className="fixed z-50 flex h-fit w-full items-center justify-between bg-white p-4">
+    <div className="fixed z-50 flex h-20 w-full items-center justify-between bg-white p-4">
       <Logo />
       <div className="hidden items-center gap-8 sm:flex">
         {NavItems.map((item, index) => (
