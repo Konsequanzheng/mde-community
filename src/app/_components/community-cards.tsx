@@ -15,42 +15,42 @@ interface CommunityCardProps {
 const communities = [
   {
     title: "🖼️ Arts & Culture Club",
-    href: "/art",
+    href: "https://mdecommunity.typeform.com/arts-culture",
     color: "bg-gray-100",
   },
   {
     title: "✍🏻 Writing Club",
-    href: "/writing",
+    href: "https://mdecommunity.typeform.com/mdewritingclub",
     color: "bg-blue-100",
   },
   {
     title: "🏳️‍🌈 Pride Zone",
-    href: "/pride",
+    href: "https://mdecommunity.typeform.com/pridezone",
     color: "bg-pink-100",
   },
   {
     title: "⛰️ Hiking",
-    href: "/hiking",
+    href: "https://mdecommunity.typeform.com/hiking",
     color: "bg-green-50",
   },
   {
     title: "🍳 Cooking Club",
-    href: "/cooking",
+    href: "https://mdecommunity.typeform.com/cookingclub",
     color: "bg-yellow-50",
   },
   {
     title: "👸🏽 Mujeres Group",
-    href: "/muejeres",
+    href: "https://mdecommunity.typeform.com/mdemujeres",
     color: "bg-purple-100",
   },
   {
     title: "🚺 Women Over 50",
-    href: "/women-over-50",
+    href: "https://mdecommunity.typeform.com/mdewome50",
     color: "bg-amber-50",
   },
   {
     title: "🚴🏻‍♀️ Cycling Club",
-    href: "/cycling",
+    href: "https://mdecommunity.typeform.com/cyclingclub",
     color: "bg-gray-100",
   },
 ];
