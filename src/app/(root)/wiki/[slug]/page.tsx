@@ -57,39 +57,14 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    // <main className="p-[6vw]">
-    //   <Link href="/">← Posts</Link>
-    //   <div className="mt-8 border-t pt-8">
-    //     {/* Render the blog post image */}
-    //     {blogPost.image && (
-    //       // eslint-disable-next-line @next/next/no-img-element
-    //       <img
-    //         src={blogPost.image.src}
-    //         // Use the Contentful Images API to render
-    //         // responsive images. No next/image required:
-    //         srcSet={`${blogPost.image.src}?w=300 1x, ${blogPost.image.src} 2x`}
-    //         width={300}
-    //         height={300}
-    //         alt={blogPost.image.alt}
-    //       />
-    //     )}
-
-    //     {/* Render the blog post title */}
-    //     <h1 className="text-3xl">{blogPost.title}</h1>
-
-    //     {/* Render the blog post body */}
-    //     <RichText document={blogPost.body} />
-    //   </div>
-    // </main>
     <div className="flex flex-col items-center">
       <div className="h-80 w-full max-w-6xl">
         {blogPost.image && (
           // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={blogPost.image.src}
+          <Image
+            src={`https:${blogPost.image.src}`}
             // Use the Contentful Images API to render
             // responsive images. No next/image required:
-            srcSet={`${blogPost.image.src}?w=300 1x, ${blogPost.image.src} 2x`}
             width={300}
             height={300}
             alt={blogPost.image.alt}
@@ -97,14 +72,37 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
           />
         )}
       </div>
-      <div className="mt-8 flex w-full max-w-6xl flex-row justify-between border-t pt-8">
+      <div className="mt-8 flex w-full max-w-6xl flex-row justify-between pt-8">
         {/* Sidebar section */}
         <div className="flex w-1/4 flex-col">
           <h1 className="text-4xl font-bold">Sidebar</h1>
         </div>
         {/* Text section */}
-        <div className="flex h-screen w-full flex-col">
+        <div className="flex w-3/4 flex-col pb-24">
+          {/* Title */}
           <h1 className="text-4xl font-bold">{blogPost.title}</h1>
+
+          {/* Author */}
+          <div className="py-5">
+            {blogPost.author && (
+              <div className="flex items-center gap-3">
+                <div className="h-16 w-16">
+                  <Image
+                    src={`https:${blogPost.author.image?.src}`}
+                    width={50}
+                    height={50}
+                    alt={blogPost.author.name}
+                    className="h-full w-full rounded-full object-cover"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <b className="text-xl">{blogPost.author.name}</b>
+                  <div>{blogPost.date ? blogPost.date.toDateString() : ""}</div>
+                </div>
+              </div>
+            )}
+          </div>
+
           <RichText document={blogPost.body} />
         </div>
       </div>

@@ -4,6 +4,7 @@ import type { Document as RichTextDocument } from "@contentful/rich-text-types";
 import contentfulClient from "./contentfulClient";
 import type { ContentImage } from "./contentImage";
 import { parseContentfulContentImage } from "./contentImage";
+import { parseContentfulAuthor, type Author } from "./author";
 
 type BlogPostEntry = Entry<TypeBlogPostSkeleton, undefined, string>;
 
@@ -14,6 +15,8 @@ export interface BlogPost {
   slug: string;
   body: RichTextDocument | null;
   image: ContentImage | null;
+  author: Author | null;
+  date: Date | null;
 }
 
 // A function to transform a Contentful blog post
@@ -30,6 +33,10 @@ export function parseContentfulBlogPost(
     slug: blogPostEntry.fields.slug,
     body: blogPostEntry.fields.body || null,
     image: parseContentfulContentImage(blogPostEntry.fields.image),
+    author: parseContentfulAuthor(blogPostEntry.fields.author),
+    date: blogPostEntry.fields.date
+      ? new Date(blogPostEntry.fields.date)
+      : null,
   };
 }
 

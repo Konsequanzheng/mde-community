@@ -5,12 +5,15 @@ import type {
   EntrySkeletonType,
   LocaleCode,
 } from "contentful";
+import type { TypeAuthorSkeleton } from "./TypeAuthor";
 
 export interface TypeBlogPostFields {
   title: EntryFieldTypes.Symbol;
   slug: EntryFieldTypes.Symbol;
   body: EntryFieldTypes.RichText;
   image?: EntryFieldTypes.AssetLink;
+  author: EntryFieldTypes.EntryLink<TypeAuthorSkeleton>;
+  date?: EntryFieldTypes.Date;
 }
 
 export type TypeBlogPostSkeleton = EntrySkeletonType<
