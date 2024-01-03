@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { fetchBlogPost, fetchBlogPosts } from "~/lib/contentful/blogPosts";
 import RichText from "~/lib/contentful/richText";
 import Image from "next/image";
+import NewsletterCard from "~/app/_components/newsletter-card";
 
 interface BlogPostPageParams {
   slug: string;
@@ -72,10 +73,10 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
           />
         )}
       </div>
-      <div className="mt-8 flex w-full max-w-6xl flex-row justify-between pt-8">
+      <div className="mt-8 flex w-full max-w-6xl flex-col justify-between px-12 py-8 sm:flex-row">
         {/* Sidebar section */}
-        <div className="flex w-1/4 flex-col">
-          <h1 className="text-4xl font-bold">Sidebar</h1>
+        <div className="mx-6 mb-5 flex h-32 w-80 flex-col rounded-3xl bg-rose-500 bg-opacity-5 p-6 sm:w-1/4">
+          <h1 className="font-bold">Jump to section:</h1>
         </div>
         {/* Text section */}
         <div className="flex w-3/4 flex-col pb-24">
@@ -104,6 +105,7 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
 
           <RichText document={blogPost.body} />
+          <NewsletterCard />
         </div>
       </div>
     </div>
