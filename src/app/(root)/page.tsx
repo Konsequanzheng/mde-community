@@ -1,14 +1,13 @@
 import Image from "next/image";
-import { Roboto, Urbanist } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import { cn } from "~/lib/utils";
 import { Button } from "../_components/ui/button";
 import CommunityCards from "../_components/community-cards";
 import ContentCard from "../_components/content-card";
 import Link from "next/link";
-import { Input } from "../_components/ui/input";
+import NewsletterCard from "../_components/newsletter-card";
 
 const urbanist = Urbanist({ weight: "800", subsets: ["latin"] });
-const roboto = Roboto({ weight: "700", subsets: ["latin"] });
 
 export default async function Home() {
   const events = [
@@ -235,26 +234,7 @@ export default async function Home() {
         {/* <Swish className="absolute -z-50" /> */}
       </div>
       {/* Newsletter section */}
-      <div className="flex max-w-xl justify-center p-5">
-        <div className="flex flex-col items-center gap-5 rounded-3xl bg-[#CB525D] p-16 text-white">
-          <div className="text-4xl">👋🏽👋🏻👋🏾👋🏼👋🏿</div>
-          <div className={cn("text-center text-3xl", roboto.className)}>
-            Sign up to our
-            <br />
-            newsletter
-          </div>
-          <div className="text-center">
-            Hear about the cool stuff happening in Medellín. We'll also be
-            giving away some special passes and discounts to some events so stay
-            tuned!
-          </div>
-
-          <Input type="email" placeholder="Email address" />
-          <Button variant="newsletter" type="submit">
-            Keep me updated
-          </Button>
-        </div>
-      </div>
+      <NewsletterCard />
     </main>
   );
 }
