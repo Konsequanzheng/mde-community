@@ -21,7 +21,8 @@ export const env = createEnv({
     CONTENTFUL_ACCESS_TOKEN: z.string(),
     CONTENTFUL_PREVIEW_ACCESS_TOKEN: z.string(),
     CONTENTFUL_MANAGEMENT_TOKEN: z.string(),
-    CONTENTFUL_PREVIEW_SECRET: z.string(),
+    // TODO: Add preview secret back
+    // CONTENTFUL_PREVIEW_SECRET: z.string(),
   },
 
   /**
@@ -45,7 +46,8 @@ export const env = createEnv({
     CONTENTFUL_PREVIEW_ACCESS_TOKEN:
       process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
     CONTENTFUL_MANAGEMENT_TOKEN: process.env.CONTENTFUL_MANAGEMENT_TOKEN,
-    CONTENTFUL_PREVIEW_SECRET: process.env.CONTENTFUL_PREVIEW_SECRET,
+    // TODO: Add preview secret back
+    // CONTENTFUL_PREVIEW_SECRET: process.env.CONTENTFUL_PREVIEW_SECRET,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**
