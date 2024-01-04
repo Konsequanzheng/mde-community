@@ -165,7 +165,9 @@ export default async function Home() {
             to donate for the MDE Community team.
           </div>
           <Button className="w-fit">
-            <Link href={"#donate"}>Donate here 💜</Link>
+            <Link href="https://ko-fi.com/mdecommunity" target="_blank">
+              Donate here 💜
+            </Link>
           </Button>
         </div>
         <div>
