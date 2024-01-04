@@ -16,7 +16,7 @@ const Navbar = () => {
           </Link>
         ))}
         <Button asChild>
-          <Link href="https://ko-fi.com/mdecommunity" target="_blank">
+          <Link href="https://mdecommunity.com/fundraiser/" target="_blank">
             Donate
           </Link>
         </Button>
