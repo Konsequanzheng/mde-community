@@ -61,8 +61,8 @@ export default async function Home() {
             urbanist.className,
           )}
         >
-          WHERE DIGITAL NOMADS,
-          <br /> EXPATS & LOCALS MEET
+          Where Digital Nomads,
+          <br /> Expats & Locals Meet
         </h1>
         <div className="flex gap-3">
           <Button>
@@ -95,7 +95,7 @@ export default async function Home() {
             urbanist.className,
           )}
         >
-          FIND YOUR COMMUNITY
+          Find Your Community
         </h1>
 
         <CommunityCards />
@@ -107,7 +107,7 @@ export default async function Home() {
         {/* <div className="flex justify-between px-12 py-3 lg:px-64"> */}
         <div className="flex justify-center py-3">
           <h1 className={cn("mb-8 text-4xl md:text-6xl", urbanist.className)}>
-            SEE WHAT'S HAPPENING
+            See What's Happening
           </h1>
           {/* TODO: Implement all events page */}
           {/* <Button>View all events</Button> */}
@@ -127,7 +127,7 @@ export default async function Home() {
             urbanist.className,
           )}
         >
-          THE ULTIMATE MEDELLIN GUIDE 🇨🇴
+          The Ultimate Medellin Guide 🇨🇴
         </h1>
         <div className="flex flex-wrap justify-center gap-3">
           <WikiCards />
@@ -142,12 +142,12 @@ export default async function Home() {
             urbanist.className,
           )}
         >
-          WE WANT TO CREATE AND CURATE EXPERIENCES THAT FOSTER CONNECTION,
+          We want to create and curate experiences that foster connection,
           <span className="bg-amber-100">
-            PROVIDING OPPORTUNITIES FOR LOCALS AND FOREIGNERS ALIKE TO PROMOTE
-            PERSONAL GROWTH,
+            providing opportunities for locals and foreigners alike to promote
+            personal growth,
           </span>{" "}
-          COMMUNITY BUILDING, AND SOCIAL IMPACT.
+          community building, and social impact.
         </h1>
       </div>
       {/* Donate section */}
@@ -157,9 +157,9 @@ export default async function Home() {
       >
         <div className="flex max-w-[580px] flex-col">
           <h1 className={cn("text-4xl lg:text-6xl", urbanist.className)}>
-            YOUR SUPPORT
+            Your support
             <br />
-            GOES A LONG WAY...
+            goes a long way...
           </h1>
           <div className="py-5">
             A healthy community is created through meaningful connections in
