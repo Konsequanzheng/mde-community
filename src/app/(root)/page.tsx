@@ -5,7 +5,6 @@ import { Button } from "../_components/ui/button";
 import CommunityCards from "../_components/community-cards";
 import Link from "next/link";
 import NewsletterCard from "../_components/newsletter-card";
-import Navbar from "../_components/navbar";
 import EventCards from "../_components/event-cards";
 import WikiCards from "../_components/wiki-cards";
 
@@ -14,7 +13,6 @@ const urbanist = Urbanist({ weight: "800", subsets: ["latin"] });
 export default async function Home() {
   return (
     <main className="-mt-40 flex flex-col items-center overflow-clip pt-40">
-      <Navbar />
       {/* Hero section */}
       <div id="home" className="relative -z-10 w-[1500px]">
         <Image
