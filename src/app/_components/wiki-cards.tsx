@@ -2,34 +2,14 @@ import ContentCard from "./content-card";
 
 const events = [
   {
-    title: "F*ck the Small Talk",
-    author: "Epic Llama",
-    location: "Secret Location",
-    src: "/ftst.png",
+    title: "Exploring Children's Education Options in Medellín",
+    author: "Diego Oritz",
+    src: "/kidsPlayingPiano.png",
     description:
-      "F*ck the Small Talk is an out-of-the-box social experience where strangers come together for an evening of meaningful, deep, & curious conversations!",
-    authorImage: "/logo.png",
-    tags: ["Fun", "Meetup"],
-  },
-  {
-    title: "F*ck the Small Talk",
-    author: "Epic Llama",
-    location: "Secret Location",
-    src: "/ftst.png",
-    description:
-      "F*ck the Small Talk is an out-of-the-box social experience where strangers come together for an evening of meaningful, deep, & curious conversations!",
-    authorImage: "/logo.png",
-    tags: ["Fun", "Meetup"],
-  },
-  {
-    title: "F*ck the Small Talk",
-    author: "Epic Llama",
-    location: "Secret Location",
-    src: "/ftst.png",
-    description:
-      "F*ck the Small Talk is an out-of-the-box social experience where strangers come together for an evening of meaningful, deep, & curious conversations!",
-    authorImage: "/logo.png",
-    tags: ["Fun", "Meetup"],
+      "Affordable quality education, children friendly environment, and top-notch services are just a few reasons for you to choose Medellín as the best place for your child’s education...",
+    authorImage: "/DiegoOritz.png",
+    tags: ["Expat life", "Parenting", "Children", "Education"],
+    href: "/wiki/exploring-childrens-education-options-in-medellin",
   },
 ];
 
@@ -45,6 +25,7 @@ const WikiCards = () => {
           author={event.author}
           authorImage={event.authorImage}
           description={event.description}
+          href={event.href}
         />
       ))}
     </>

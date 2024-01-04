@@ -10,6 +10,7 @@ const events = [
       "F*ck the Small Talk is an out-of-the-box social experience where strangers come together for an evening of meaningful, deep, & curious conversations!",
     authorImage: "/logo.png",
     tags: ["Fun", "Meetup"],
+    href: "",
   },
   {
     title: "F*ck the Small Talk",
@@ -20,6 +21,7 @@ const events = [
       "F*ck the Small Talk is an out-of-the-box social experience where strangers come together for an evening of meaningful, deep, & curious conversations!",
     authorImage: "/logo.png",
     tags: ["Fun", "Meetup"],
+    href: "",
   },
   {
     title: "F*ck the Small Talk",
@@ -30,6 +32,7 @@ const events = [
       "F*ck the Small Talk is an out-of-the-box social experience where strangers come together for an evening of meaningful, deep, & curious conversations!",
     authorImage: "/logo.png",
     tags: ["Fun", "Meetup"],
+    href: "",
   },
 ];
 
@@ -46,6 +49,7 @@ const EventCards = () => {
           authorImage={event.authorImage}
           location={event.location}
           description={event.description}
+          href={event.href}
         />
       ))}
     </>
