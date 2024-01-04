@@ -16,7 +16,9 @@ const Navbar = () => {
           </Link>
         ))}
         <Button asChild>
-          <Link href={"#donate"}>Donate</Link>
+          <Link href="https://ko-fi.com/mdecommunity" target="_blank">
+            Donate
+          </Link>
         </Button>
       </div>
       <MobileTopBar />
