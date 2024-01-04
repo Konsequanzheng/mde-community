@@ -76,7 +76,7 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
       <div className="mt-8 flex w-full max-w-6xl flex-col justify-center px-12 py-8 sm:flex-row">
         {/* Sidebar section */}
 
-        <div className="mx-6 mb-5 flex h-32 w-80 sm:w-1/4"></div>
+        {/* <div className="mx-6 mb-5 flex h-32 w-80 sm:w-1/4"></div> */}
         {/* <div className="mx-6 mb-5 flex h-32 w-80 flex-col rounded-3xl bg-rose-500 bg-opacity-5 p-6 sm:w-1/4">
           <h1 className="font-bold">Jump to section:</h1>
         </div> */}
