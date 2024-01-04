@@ -117,7 +117,10 @@ export default async function Home() {
         {/* <Swish className="absolute -z-50" /> */}
       </div>
       {/* Communities section */}
-      <div id="communities" className="flex w-full flex-col items-center pb-32">
+      <div
+        id="communities"
+        className="-mt-40 flex w-full flex-col items-center pb-32 pt-40 "
+      >
         <h1
           className={cn(
             "mb-8 text-center text-5xl md:text-6xl",
@@ -132,7 +135,7 @@ export default async function Home() {
       {/* TODO: Implement all communities page */}
       {/* <Button>View all communities</Button> */}
       {/* Events section */}
-      <div id="events" className="flex w-full flex-col pb-32">
+      <div id="events" className="-mt-40 flex w-full flex-col pb-32 pt-40">
         {/* <div className="flex justify-between px-12 py-3 lg:px-64"> */}
         <div className="flex justify-center py-3">
           <h1 className={cn("mb-8 text-4xl md:text-6xl", urbanist.className)}>
@@ -157,7 +160,10 @@ export default async function Home() {
         </div>
       </div>
       {/* Blog section */}
-      <div id="blog" className="flex w-full flex-col justify-center pb-32">
+      <div
+        id="blog"
+        className="-mt-40 flex w-full flex-col justify-center pb-32 pt-40"
+      >
         <h1
           className={cn(
             "mb-8 p-8 text-center text-4xl md:text-6xl",
@@ -182,7 +188,7 @@ export default async function Home() {
       </div>
       {/* Mission section */}
 
-      <div className="flex w-full flex-col items-center px-5 pb-32 lg:px-20">
+      <div className="-mt-40 flex w-full flex-col items-center px-5 pb-32 pt-40 lg:px-20">
         <h1
           className={cn(
             "mb-8 p-8 text-center text-2xl md:text-4xl",
@@ -200,7 +206,7 @@ export default async function Home() {
       {/* Donate section */}
       <div
         id="donate"
-        className="flex flex-wrap-reverse items-center justify-center gap-10 p-12"
+        className="-mt-40 flex flex-wrap-reverse items-center justify-center gap-10 p-12 pt-40"
       >
         <div className="flex max-w-[580px] flex-col">
           <h1 className={cn("text-4xl lg:text-6xl", urbanist.className)}>

@@ -76,7 +76,7 @@ const CommunityCard = ({
   color = "bg-gray-100",
 }: CommunityCardProps) => {
   return (
-    <Link href={href}>
+    <Link href={href} target="_blank">
       <div
         className={cn(
           "flex items-center justify-center rounded-full px-4 py-3",
