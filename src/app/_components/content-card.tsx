@@ -8,6 +8,7 @@ import {
 } from "./ui/card";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
+import Link from "next/link";
 
 interface EventCardProps {
   title: string;
@@ -17,6 +18,7 @@ interface EventCardProps {
   authorImage: string;
   location?: string;
   description: string;
+  href?: string;
 }
 
 const ContentCard = ({
@@ -27,39 +29,44 @@ const ContentCard = ({
   authorImage,
   location,
   description,
+  href,
 }: EventCardProps) => {
   return (
-    <Card>
-      <CardHeader>
-        <Image
-          src={src}
-          alt={`${title} Image`}
-          height={200}
-          width={300}
-          className="rounded-md"
-        />
-        <div className="flex gap-1 p-1">
-          {tags.map((tag) => {
-            return <Badge variant={"eventCard"}>{tag}</Badge>;
-          })}
-        </div>
-        <CardTitle>{title}</CardTitle>
-        <div className="flex gap-1 py-1">
-          <Image
-            src={authorImage}
-            alt={`${author} Image`}
-            height={25}
-            width={25}
-            className="rounded-full"
-          />
-          <div>{author}</div>
-        </div>
-        {location ? <CardDescription>📍{location}</CardDescription> : null}
-      </CardHeader>
-      <CardContent className="-mt-4 w-80">
-        <p>{description}</p>
-      </CardContent>
-    </Card>
+    <Link href={href ? href : "/"}>
+      <Card className="w-[335px]">
+        <CardHeader>
+          <div className="h-40 w-72">
+            <Image
+              src={src}
+              alt={`${title} Image`}
+              height={200}
+              width={300}
+              className="m-full h-full rounded-md object-cover"
+            />
+          </div>
+          <div className="flex gap-1 p-1">
+            {tags.map((tag) => {
+              return <Badge variant={"eventCard"}>{tag}</Badge>;
+            })}
+          </div>
+          <CardTitle>{title}</CardTitle>
+          <div className="flex gap-1 py-1">
+            <Image
+              src={authorImage}
+              alt={`${author} Image`}
+              height={25}
+              width={25}
+              className="rounded-full"
+            />
+            <div>{author}</div>
+          </div>
+          {location ? <CardDescription>📍{location}</CardDescription> : null}
+        </CardHeader>
+        <CardContent className="-mt-4">
+          <p>{description}</p>
+        </CardContent>
+      </Card>
+    </Link>
   );
 };
 
