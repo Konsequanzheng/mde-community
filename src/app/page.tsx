@@ -4,49 +4,17 @@ import { Roboto, Urbanist } from "next/font/google";
 import { cn } from "~/lib/utils";
 import { Button } from "./_components/ui/button";
 import CommunityCards from "./_components/community-cards";
-import ContentCard from "./_components/content-card";
 import Link from "next/link";
 import { Input } from "./_components/ui/input";
+import EventCards from "./_components/event-cards";
+import WikiCards from "./_components/wiki-cards";
 
 const urbanist = Urbanist({ weight: "800", subsets: ["latin"] });
 const roboto = Roboto({ weight: "700", subsets: ["latin"] });
 
 export default async function Home() {
-  const events = [
-    {
-      title: "F*ck the Small Talk",
-      author: "Epic Llama",
-      location: "Secret Location",
-      src: "/ftst.png",
-      description:
-        "F*ck the Small Talk is an out-of-the-box social experience where strangers come together for an evening of meaningful, deep, & curious conversations!",
-      authorImage: "/logo.png",
-      tags: ["Fun", "Meetup"],
-    },
-    {
-      title: "F*ck the Small Talk",
-      author: "Epic Llama",
-      location: "Secret Location",
-      src: "/ftst.png",
-      description:
-        "F*ck the Small Talk is an out-of-the-box social experience where strangers come together for an evening of meaningful, deep, & curious conversations!",
-      authorImage: "/logo.png",
-      tags: ["Fun", "Meetup"],
-    },
-    {
-      title: "F*ck the Small Talk",
-      author: "Epic Llama",
-      location: "Secret Location",
-      src: "/ftst.png",
-      description:
-        "F*ck the Small Talk is an out-of-the-box social experience where strangers come together for an evening of meaningful, deep, & curious conversations!",
-      authorImage: "/logo.png",
-      tags: ["Fun", "Meetup"],
-    },
-  ];
-
   return (
-    <main className="flex flex-col items-center overflow-clip">
+    <main className="-mt-40 flex flex-col items-center overflow-clip pt-40">
       <Navbar />
       {/* Hero section */}
       <div id="home" className="relative -z-10 w-[1500px]">
@@ -145,18 +113,7 @@ export default async function Home() {
           {/* <Button>View all events</Button> */}
         </div>
         <div className="flex flex-wrap justify-center gap-3 xl:px-64">
-          {events.map((event, index) => (
-            <ContentCard
-              key={index}
-              title={event.title}
-              src={event.src}
-              tags={event.tags}
-              author={event.author}
-              authorImage={event.authorImage}
-              location={event.location}
-              description={event.description}
-            />
-          ))}
+          <EventCards />
         </div>
       </div>
       {/* Blog section */}
@@ -173,17 +130,7 @@ export default async function Home() {
           THE ULTIMATE MEDELLIN GUIDE 🇨🇴
         </h1>
         <div className="flex flex-wrap justify-center gap-3">
-          {events.map((event, index) => (
-            <ContentCard
-              key={index}
-              title={event.title}
-              src={event.src}
-              tags={event.tags}
-              author={event.author}
-              authorImage={event.authorImage}
-              description={event.description}
-            />
-          ))}
+          <WikiCards />
         </div>
       </div>
       {/* Mission section */}

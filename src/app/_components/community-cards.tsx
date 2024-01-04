@@ -8,10 +8,6 @@ interface CommunityCardProps {
   color?: string;
 }
 
-{
-  /* TODO: ADD LINK TO COMMUNITIES */
-}
-
 const communities = [
   {
     title: "🖼️ Arts & Culture Club",
