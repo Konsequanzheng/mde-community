@@ -33,7 +33,7 @@ const ContentCard = ({
 }: EventCardProps) => {
   return (
     <Link href={href ? href : "/"}>
-      <Card className="w-[335px]">
+      <Card className="h-[480px] w-[335px] transition ease-in-out hover:scale-105">
         <CardHeader>
           <div className="h-40 w-72">
             <Image
