@@ -1,13 +1,13 @@
 import "~/styles/globals.css";
 
-import { Roboto } from "next/font/google";
+import { Inter } from "next/font/google";
 import { cookies } from "next/headers";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import { cn } from "~/lib/utils";
 import { TailwindIndicator } from "./_components/tailwind-indicator";
 
-const roboto = Roboto({
+const roboto = Inter({
   weight: ["400"],
   subsets: ["latin"],
 });
