@@ -66,8 +66,8 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
             src={`https:${blogPost.image.src}`}
             // Use the Contentful Images API to render
             // responsive images. No next/image required:
-            width={300}
-            height={300}
+            width={blogPost.image.width}
+            height={blogPost.image.height}
             alt={blogPost.image.alt}
             className="h-full w-full object-cover"
           />
