@@ -154,9 +154,11 @@ export default async function Home() {
         className="-mt-40 flex flex-wrap-reverse items-center justify-center gap-10 p-12 pt-40"
       >
         <div className="flex max-w-[580px] flex-col">
+          {/* TODO: the h1 can probably be done better but this does the job */}
           <h1 className={cn("text-4xl lg:text-6xl", urbanist.className)}>
             Your support
-            <br />
+          </h1>
+          <h1 className={cn("text-4xl lg:text-6xl mt-2", urbanist.className)}>
             goes a long way...
           </h1>
           <div className="py-5">
