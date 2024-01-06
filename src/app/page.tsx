@@ -3,13 +3,13 @@ import Navbar from "./_components/navbar";
 import { Roboto, Urbanist } from "next/font/google";
 import { cn } from "~/lib/utils";
 import { Button } from "./_components/ui/button";
-import CommunityCardsRotateScale from "./_components/community-cards";
+import CommunityCardsRotateScale from "./_components/community-cards-rotate-scale";
 import Link from "next/link";
 import { Input } from "./_components/ui/input";
 import EventCards from "./_components/event-cards";
 import WikiCards from "./_components/wiki-cards";
 import CommunityCardsScale from "./_components/community-cards-scale";
-import CommunityCardsRotate from "./_components/community-cards copy-rotate";
+import CommunityCardsRotate from "./_components/community-cards-rotate";
 
 const urbanist = Urbanist({ weight: "800", subsets: ["latin"] });
 const roboto = Roboto({ weight: "700", subsets: ["latin"] });
