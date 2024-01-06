@@ -51,11 +51,11 @@ const communities = [
   },
 ];
 
-const CommunityCards = () => {
+const CommunityCardsScale = () => {
   return (
     <div className="mb-8 flex w-4/6 max-w-[800px] flex-wrap justify-center gap-4">
       {communities.map((community) => (
-        <CommunityCard
+        <CommunityCardScale
           key={community.title}
           title={community.title}
           href={community.href}
@@ -66,7 +66,7 @@ const CommunityCards = () => {
   );
 };
 
-const CommunityCard = ({
+const CommunityCardScale = ({
   title,
   href,
   color = "bg-gray-100",
@@ -85,4 +85,4 @@ const CommunityCard = ({
   );
 };
 
-export default CommunityCards;
+export default CommunityCardsScale;

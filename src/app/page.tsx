@@ -3,11 +3,13 @@ import Navbar from "./_components/navbar";
 import { Roboto, Urbanist } from "next/font/google";
 import { cn } from "~/lib/utils";
 import { Button } from "./_components/ui/button";
-import CommunityCards from "./_components/community-cards";
+import CommunityCardsRotateScale from "./_components/community-cards";
 import Link from "next/link";
 import { Input } from "./_components/ui/input";
 import EventCards from "./_components/event-cards";
 import WikiCards from "./_components/wiki-cards";
+import CommunityCardsScale from "./_components/community-cards-scale";
+import CommunityCardsRotate from "./_components/community-cards copy-rotate";
 
 const urbanist = Urbanist({ weight: "800", subsets: ["latin"] });
 const roboto = Roboto({ weight: "700", subsets: ["latin"] });
@@ -98,7 +100,9 @@ export default async function Home() {
           Find Your Community
         </h1>
 
-        <CommunityCards />
+        <CommunityCardsScale />
+        <CommunityCardsRotate />
+        <CommunityCardsRotateScale />
       </div>
       {/* TODO: Implement all communities page */}
       {/* <Button>View all communities</Button> */}

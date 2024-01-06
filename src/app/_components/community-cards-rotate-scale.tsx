@@ -51,11 +51,11 @@ const communities = [
   },
 ];
 
-const CommunityCards = () => {
+const CommunityCardsRotateScale = () => {
   return (
     <div className="mb-8 flex w-4/6 max-w-[800px] flex-wrap justify-center gap-4">
       {communities.map((community) => (
-        <CommunityCard
+        <CommunityCardRotateScale
           key={community.title}
           title={community.title}
           href={community.href}
@@ -66,7 +66,7 @@ const CommunityCards = () => {
   );
 };
 
-const CommunityCard = ({
+const CommunityCardRotateScale = ({
   title,
   href,
   color = "bg-gray-100",
@@ -75,7 +75,7 @@ const CommunityCard = ({
     <Link href={href} target="_blank">
       <div
         className={cn(
-          "flex items-center justify-center rounded-full px-4 py-3 transition hover:scale-105",
+          "flex items-center justify-center rounded-full px-4 py-3 transition hover:-rotate-3 hover:scale-105",
           color,
         )}
       >
@@ -85,4 +85,4 @@ const CommunityCard = ({
   );
 };
 
-export default CommunityCards;
+export default CommunityCardsRotateScale;
