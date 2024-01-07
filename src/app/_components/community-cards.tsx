@@ -75,7 +75,7 @@ const CommunityCard = ({
     <Link href={href} target="_blank">
       <div
         className={cn(
-          "flex items-center justify-center rounded-full px-4 py-3",
+          "flex items-center justify-center rounded-full px-4 py-3 transition hover:scale-105",
           color,
         )}
       >

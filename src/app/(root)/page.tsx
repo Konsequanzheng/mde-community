@@ -158,7 +158,7 @@ export default async function Home() {
           <h1 className={cn("text-4xl lg:text-6xl", urbanist.className)}>
             Your support
           </h1>
-          <h1 className={cn("text-4xl lg:text-6xl mt-2", urbanist.className)}>
+          <h1 className={cn("mt-2 text-4xl lg:text-6xl", urbanist.className)}>
             goes a long way...
           </h1>
           <div className="py-5">
