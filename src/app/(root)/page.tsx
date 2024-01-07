@@ -63,7 +63,9 @@ export default async function Home() {
         </h1>
         <div className="flex gap-3">
           <Button>
-            <Link href={"#communities"}>Join a community</Link>
+            <Link href={"#communities"} className="font-bold">
+              Join a community
+            </Link>
           </Button>
           <Button variant="secondary">
             <Link href={"#events"}>View events</Link>
@@ -109,7 +111,7 @@ export default async function Home() {
           {/* TODO: Implement all events page */}
           {/* <Button>View all events</Button> */}
         </div>
-        <div className="flex flex-wrap justify-center gap-3 xl:px-64">
+        <div className="flex flex-wrap justify-center gap-3 ">
           <EventCards />
         </div>
       </div>
@@ -136,7 +138,7 @@ export default async function Home() {
       <div className="-mt-40 flex w-full flex-col items-center px-5 pb-32 pt-40 lg:px-20">
         <h1
           className={cn(
-            "mb-8 p-8 text-center text-2xl md:text-4xl",
+            "mb-8 max-w-7xl p-8 text-center text-2xl md:text-4xl",
             urbanist.className,
           )}
         >
@@ -151,7 +153,7 @@ export default async function Home() {
       {/* Donate section */}
       <div
         id="donate"
-        className="-mt-40 flex flex-wrap-reverse items-center justify-center gap-10 p-12 pt-40"
+        className="-mt-40 flex flex-wrap-reverse items-center justify-center gap-20 p-12 pt-40"
       >
         <div className="flex max-w-[580px] flex-col">
           {/* TODO: the h1 can probably be done better but this does the job */}
@@ -161,12 +163,12 @@ export default async function Home() {
           <h1 className={cn("mt-2 text-4xl lg:text-6xl", urbanist.className)}>
             goes a long way...
           </h1>
-          <div className="py-5">
+          <div className="max-w-[470px] py-5">
             A healthy community is created through meaningful connections in
             safe environments. Support the creation of these spaces by choosing
             to donate for the MDE Community team.
           </div>
-          <Button className="w-fit">
+          <Button variant="tertiary" className="font-bold">
             <Link href="https://mdecommunity.com/fundraiser/" target="_blank">
               Donate here 💜
             </Link>
