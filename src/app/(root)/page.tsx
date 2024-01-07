@@ -168,8 +168,12 @@ export default async function Home() {
             safe environments. Support the creation of these spaces by choosing
             to donate for the MDE Community team.
           </div>
-          <Button variant="tertiary" className="font-bold">
-            <Link href="https://mdecommunity.com/fundraiser/" target="_blank">
+          <Button variant="tertiary">
+            <Link
+              href="https://mdecommunity.com/fundraiser/"
+              target="_blank"
+              className="font-bold"
+            >
               Donate here 💜
             </Link>
           </Button>
