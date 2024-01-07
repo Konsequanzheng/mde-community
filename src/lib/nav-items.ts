@@ -1,19 +1,19 @@
 const NavItems = [
   {
     title: "Home",
-    href: "#home",
+    href: "/#home",
   },
   {
     title: "Communities",
-    href: "#communities",
+    href: "/#communities",
   },
   {
     title: "Events",
-    href: "#events",
+    href: "/#events",
   },
   {
     title: "Blog",
-    href: "#blog",
+    href: "/#blog",
   },
 ];
 
