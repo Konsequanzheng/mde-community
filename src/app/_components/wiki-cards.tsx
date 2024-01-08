@@ -11,6 +11,16 @@ const events = [
     tags: ["Expat life", "Parenting", "Children", "Education"],
     href: "/wiki/exploring-childrens-education-options-in-medellin",
   },
+  {
+    title: "Beyond Parce: Advanced Paisa Slang",
+    author: "Diego Oritz",
+    src: "/noDarPapaya.png",
+    description:
+      "Imagine walking through the streets of Medellín in December. You stop by a local vendor for a mandinga, and as you savor the flavors, the guy serving your food tells his friend “pille papi mi traído tan charro”...",
+    authorImage: "/DiegoOritz.png",
+    tags: ["Expat life", "Local culture", "Paisa slang"],
+    href: "/wiki/beyond-parce-mastering-advanced-paisa-slang-in-medellin",
+  },
 ];
 
 const WikiCards = () => {
