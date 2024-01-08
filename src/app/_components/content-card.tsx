@@ -56,7 +56,7 @@ const ContentCard = ({
               alt={`${author} Image`}
               height={25}
               width={25}
-              className="rounded-full"
+              className="rounded-full object-cover"
             />
             <div>{author}</div>
           </div>

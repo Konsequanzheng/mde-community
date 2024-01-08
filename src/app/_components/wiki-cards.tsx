@@ -7,7 +7,7 @@ const events = [
     src: "/kidsPlayingPiano.png",
     description:
       "Affordable quality education, children friendly environment, and top-notch services are just a few reasons for you to choose Medellín as the best place for your child’s education...",
-    authorImage: "/DiegoOritz.png",
+    authorImage: "/DiegoOritz.jpg",
     tags: ["Expat life", "Parenting", "Children", "Education"],
     href: "/wiki/exploring-childrens-education-options-in-medellin",
   },
@@ -17,7 +17,7 @@ const events = [
     src: "/noDarPapaya.png",
     description:
       "Imagine walking through the streets of Medellín in December. You stop by a local vendor for a mandinga, and as you savor the flavors, the guy serving your food tells his friend “pille papi mi traído tan charro”...",
-    authorImage: "/DiegoOritz.png",
+    authorImage: "/DiegoOritz.jpg",
     tags: ["Expat life", "Local culture", "Paisa slang"],
     href: "/wiki/beyond-parce-mastering-advanced-paisa-slang-in-medellin",
   },
