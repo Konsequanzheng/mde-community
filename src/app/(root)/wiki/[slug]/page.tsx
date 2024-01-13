@@ -63,7 +63,7 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
         {blogPost.image && (
           // eslint-disable-next-line @next/next/no-img-element
           <Image
-            src={`https:${blogPost.image.src}`}
+            src={`${blogPost.image.src}`}
             // Use the Contentful Images API to render
             // responsive images. No next/image required:
             width={blogPost.image.width}
@@ -91,7 +91,7 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="flex items-center gap-3">
                 <div className="h-16 w-16">
                   <Image
-                    src={`https:${blogPost.author.image?.src}`}
+                    src={`${blogPost.author.image?.src}`}
                     width={50}
                     height={50}
                     alt={blogPost.author.name}

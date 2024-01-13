@@ -23,7 +23,7 @@ export function parseContentfulContentImage(
   }
 
   return {
-    src: `https://${asset.fields.file?.url}` ?? "",
+    src: `https:${asset.fields.file?.url}` ?? "",
     alt: asset.fields.description ?? "",
     width: asset.fields.file?.details.image?.width ?? 0,
     height: asset.fields.file?.details.image?.height ?? 0,
