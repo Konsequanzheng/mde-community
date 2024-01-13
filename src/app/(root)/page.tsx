@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Roboto, Urbanist } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import { cn } from "~/lib/utils";
 import Link from "next/link";
 import CommunityCards from "../_components/community-cards";
@@ -9,7 +9,6 @@ import { Input } from "../_components/ui/input";
 import WikiCards from "../_components/wiki-cards";
 
 const urbanist = Urbanist({ weight: "800", subsets: ["latin"] });
-const roboto = Roboto({ weight: "700", subsets: ["latin"] });
 
 export default async function Home() {
   return (
