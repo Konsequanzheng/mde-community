@@ -92,8 +92,8 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="h-16 w-16">
                   <Image
                     src={`${blogPost.author.image?.src}`}
-                    width={50}
-                    height={50}
+                    width={64}
+                    height={64}
                     alt={blogPost.author.name}
                     className="h-full w-full rounded-full object-cover"
                   />
