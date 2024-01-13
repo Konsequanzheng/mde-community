@@ -63,10 +63,10 @@ export default async function Home() {
         </h1>
         <div className="flex gap-3">
           <Button variant="secondary" className="font-bold">
-            <Link href={"#events"}>View events</Link>
+            <Link href="#events">View events</Link>
           </Button>
           <Button>
-            <Link href={"#communities"} className="font-bold">
+            <Link href="#communities" className="font-bold">
               Join a community
             </Link>
           </Button>
@@ -113,9 +113,9 @@ export default async function Home() {
           <EventCards />
         </div>
         {/* TODO: Implement all events page */}
-        
-          <Button className="w-fit">
-<Link href="https://linktr.ee/mdecommunity">View all events</Link></Button>       
+        <Button className="z-10 w-fit">
+          <Link href="https://linktr.ee/mdecommunity">View all events</Link>
+        </Button>
       </div>
       {/* Blog section */}
       <div
