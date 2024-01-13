@@ -10,35 +10,37 @@ interface CommunityCardProps {
 
 const communities = [
   {
-    title: "🖼️ Arts & Culture Club",
-    href: "https://mdecommunity.typeform.com/arts-culture",
-    color: "bg-gray-100",
-  },
-  {
-    title: "✍🏻 Writing Club",
-    href: "https://mdecommunity.typeform.com/mdewritingclub",
-    color: "bg-blue-100",
-  },
-  {
-    title: "🏳️‍🌈 Pride Zone",
-    href: "https://mdecommunity.typeform.com/pridezone",
-    color: "bg-pink-100",
-  },
-  {
-    title: "⛰️ Hiking",
-    href: "https://mdecommunity.typeform.com/hiking",
-    color: "bg-green-50",
+    title: "👸🏽 Mujeres Group",
+    href: "https://mdecommunity.typeform.com/mdemujeres",
+    color: "bg-purple-200",
   },
   {
     title: "🍳 Cooking Club",
     href: "https://mdecommunity.typeform.com/cookingclub",
-    color: "bg-yellow-50",
+    color: "bg-yellow-100",
   },
   {
-    title: "👸🏽 Mujeres Group",
-    href: "https://mdecommunity.typeform.com/mdemujeres",
-    color: "bg-purple-100",
+    title: "⛰️ Hiking",
+    href: "https://mdecommunity.typeform.com/hiking",
+    color: "bg-lime-200",
   },
+
+  {
+    title: "🖼️ Arts & Culture Club",
+    href: "https://mdecommunity.typeform.com/arts-culture",
+    color: "bg-blue-200",
+  },
+  {
+    title: "✍🏻 Writing Club",
+    href: "https://mdecommunity.typeform.com/mdewritingclub",
+    color: "bg-[#F3838D]",
+  },
+  {
+    title: "🏳️‍🌈 Pride Zone",
+    href: "https://mdecommunity.typeform.com/pridezone",
+    color: "bg-pink-200",
+  },
+
   {
     title: "🚺 Women Over 50",
     href: "https://mdecommunity.typeform.com/mdewome50",
@@ -47,7 +49,7 @@ const communities = [
   {
     title: "🚴🏻‍♀️ Cycling Club",
     href: "https://mdecommunity.typeform.com/cyclingclub",
-    color: "bg-gray-100",
+    color: "bg-orange-300",
   },
 ];
 
