@@ -62,13 +62,13 @@ export default async function Home() {
           <br /> Expats & Locals Meet
         </h1>
         <div className="flex gap-3">
+          <Button variant="secondary" className="font-bold">
+            <Link href={"#events"}>View events</Link>
+          </Button>
           <Button>
             <Link href={"#communities"} className="font-bold">
               Join a community
             </Link>
-          </Button>
-          <Button variant="secondary">
-            <Link href={"#events"}>View events</Link>
           </Button>
         </div>
 
@@ -102,18 +102,18 @@ export default async function Home() {
       {/* TODO: Implement all communities page */}
       {/* <Button>View all communities</Button> */}
       {/* Events section */}
-      <div id="events" className="-mt-40 flex w-full flex-col pb-32 pt-40">
-        {/* <div className="flex justify-between px-12 py-3 lg:px-64"> */}
-        <div className="mb-8 flex items-center justify-center">
-          <h1 className={cn("pr-8 text-4xl md:text-6xl", urbanist.className)}>
-            See What's Happening
-          </h1>
-          {/* TODO: Implement all events page */}
-          {/* <Button>View all events</Button> */}
-        </div>
-        <div className="flex flex-wrap justify-center gap-3 ">
+      <div
+        id="events"
+        className="-mt-40 flex w-full flex-col items-center pb-32 pt-40"
+      >
+        <h1 className={cn("mb-8 text-4xl md:text-6xl", urbanist.className)}>
+          See What's Happening
+        </h1>
+        <div className="flex flex-wrap justify-center gap-3 pb-10">
           <EventCards />
         </div>
+        {/* TODO: Implement all events page */}
+        <Button className="w-fit">View all events</Button>
       </div>
       {/* Blog section */}
       <div

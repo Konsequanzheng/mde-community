@@ -13,7 +13,7 @@ const Logo = () => {
     <Link href="/">
       <div className="flex items-center gap-3">
         <Image
-          src="/logo-full.png"
+          src="/logo-full-color.png"
           alt="MDE Community Logo"
           width={50}
           height={50}
