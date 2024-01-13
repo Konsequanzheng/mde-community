@@ -1,7 +1,7 @@
 import type { Metadata, ResolvingMetadata } from "next";
 import { draftMode } from "next/headers";
 import { notFound } from "next/navigation";
-import { fetchBlogPost, fetchBlogPosts } from "~/lib/contentful/blogPosts";
+import { fetchBlogPost, fetchAllBlogPosts } from "~/lib/contentful/blogPosts";
 import RichText from "~/lib/contentful/richText";
 import Image from "next/image";
 import NewsletterCard from "~/app/_components/newsletter-card";
@@ -17,7 +17,7 @@ interface BlogPostPageProps {
 // Tell Next.js about all our blog posts so
 // they can be statically generated at build time.
 export async function generateStaticParams(): Promise<BlogPostPageParams[]> {
-  const blogPosts = await fetchBlogPosts({ preview: false });
+  const blogPosts = await fetchAllBlogPosts({ preview: false });
 
   return blogPosts.map((post) => ({ slug: post.slug }));
 }

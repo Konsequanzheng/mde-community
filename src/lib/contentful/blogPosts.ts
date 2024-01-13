@@ -44,7 +44,7 @@ export function parseContentfulBlogPost(
   };
 }
 
-// A function to fetch all blog posts.
+// A function to fetch <amount> blog posts.
 // Optionally uses the Contentful content preview.
 interface FetchBlogPostsOptions {
   preview: boolean;
@@ -60,6 +60,27 @@ export async function fetchBlogPosts({
     content_type: "blogPost",
     include: 2,
     limit: amount,
+    order: ["-sys.createdAt"],
+  });
+
+  return blogPostsResult.items.map(
+    (blogPostEntry) => parseContentfulBlogPost(blogPostEntry)!,
+  );
+}
+
+// A function to fetch all blog posts.
+// Optionally uses the Contentful content preview.
+interface FetchAllBlogPostsOptions {
+  preview: boolean;
+}
+export async function fetchAllBlogPosts({
+  preview,
+}: FetchAllBlogPostsOptions): Promise<BlogPost[]> {
+  const contentful = contentfulClient({ preview });
+
+  const blogPostsResult = await contentful.getEntries<TypeBlogPostSkeleton>({
+    content_type: "blogPost",
+    include: 2,
     order: ["-sys.createdAt"],
   });
 

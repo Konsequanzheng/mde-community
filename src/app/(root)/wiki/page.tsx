@@ -1,12 +1,14 @@
 import { draftMode } from "next/headers";
 
 import Link from "next/link";
-import { fetchBlogPosts } from "~/lib/contentful/blogPosts";
+import { fetchAllBlogPosts } from "~/lib/contentful/blogPosts";
 
 async function Home() {
   // Fetch blog posts using the content preview
   // if draft mode is enabled:
-  const blogPosts = await fetchBlogPosts({ preview: draftMode().isEnabled });
+  const blogPosts = await fetchAllBlogPosts({
+    preview: draftMode().isEnabled,
+  });
 
   return (
     <main className="p-[6vw]">
