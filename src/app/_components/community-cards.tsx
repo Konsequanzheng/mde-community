@@ -55,7 +55,7 @@ const communities = [
 
 const CommunityCards = () => {
   return (
-    <div className="mb-8 flex w-4/6 max-w-[900px] flex-wrap justify-center gap-4">
+    <div className="mb-8 flex w-4/6 max-w-[950px] flex-wrap justify-center gap-4">
       {communities.map((community) => (
         <CommunityCard
           key={community.title}
