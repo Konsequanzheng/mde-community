@@ -113,7 +113,9 @@ export default async function Home() {
           <EventCards />
         </div>
         {/* TODO: Implement all events page */}
-        <Button className="w-fit">View all events</Button>
+        <Link href="https://linktr.ee/mdecommunity">
+          <Button className="w-fit">View all events</Button>
+        </Link>
       </div>
       {/* Blog section */}
       <div
