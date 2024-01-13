@@ -15,10 +15,10 @@ const WikiCards = async () => {
           <ContentCard
             key={blogPost.slug}
             title={blogPost.title}
-            src={blogPost.image?.src!}
+            src={blogPost.image?.src ?? ""}
             tags={blogPost.tags}
-            author={blogPost.author?.name!}
-            authorImage={blogPost.author?.image?.src!}
+            author={blogPost.author?.name ?? ""}
+            authorImage={blogPost.author?.image?.src ?? ""}
             description={blogPost.teaser}
             href={`/wiki/${blogPost.slug}`}
           />
