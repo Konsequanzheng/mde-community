@@ -17,6 +17,8 @@ export interface BlogPost {
   image: ContentImage | null;
   author: Author | null;
   date: Date | null;
+  tags: string[];
+  teaser: string;
 }
 
 // A function to transform a Contentful blog post
@@ -37,6 +39,8 @@ export function parseContentfulBlogPost(
     date: blogPostEntry.fields.date
       ? new Date(blogPostEntry.fields.date)
       : null,
+    tags: blogPostEntry.fields.tags || [],
+    teaser: blogPostEntry.fields.teaser || "",
   };
 }
 
@@ -44,16 +48,19 @@ export function parseContentfulBlogPost(
 // Optionally uses the Contentful content preview.
 interface FetchBlogPostsOptions {
   preview: boolean;
+  amount: number;
 }
 export async function fetchBlogPosts({
   preview,
+  amount,
 }: FetchBlogPostsOptions): Promise<BlogPost[]> {
   const contentful = contentfulClient({ preview });
 
   const blogPostsResult = await contentful.getEntries<TypeBlogPostSkeleton>({
     content_type: "blogPost",
     include: 2,
-    order: ["fields.title"],
+    limit: amount,
+    order: ["-sys.createdAt"],
   });
 
   return blogPostsResult.items.map(

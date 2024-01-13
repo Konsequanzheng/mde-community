@@ -10,9 +10,11 @@ import type { TypeAuthorSkeleton } from "./TypeAuthor";
 export interface TypeBlogPostFields {
   title: EntryFieldTypes.Symbol;
   slug: EntryFieldTypes.Symbol;
-  body: EntryFieldTypes.RichText;
-  image?: EntryFieldTypes.AssetLink;
   author: EntryFieldTypes.EntryLink<TypeAuthorSkeleton>;
+  tags: EntryFieldTypes.Array<EntryFieldTypes.Symbol>;
+  image?: EntryFieldTypes.AssetLink;
+  body: EntryFieldTypes.RichText;
+  teaser: EntryFieldTypes.Symbol;
   date?: EntryFieldTypes.Date;
 }
 
