@@ -1,13 +1,12 @@
 import Image from "next/image";
-import Navbar from "./_components/navbar";
 import { Roboto, Urbanist } from "next/font/google";
 import { cn } from "~/lib/utils";
-import { Button } from "./_components/ui/button";
 import Link from "next/link";
-import { Input } from "./_components/ui/input";
-import EventCards from "./_components/event-cards";
-import WikiCards from "./_components/wiki-cards";
-import CommunityCards from "./_components/community-cards";
+import CommunityCards from "../_components/community-cards";
+import EventCards from "../_components/event-cards";
+import { Button } from "../_components/ui/button";
+import { Input } from "../_components/ui/input";
+import WikiCards from "../_components/wiki-cards";
 
 const urbanist = Urbanist({ weight: "800", subsets: ["latin"] });
 const roboto = Roboto({ weight: "700", subsets: ["latin"] });
@@ -15,7 +14,6 @@ const roboto = Roboto({ weight: "700", subsets: ["latin"] });
 export default async function Home() {
   return (
     <main className="-mt-40 flex flex-col items-center overflow-clip pt-40">
-      <Navbar />
       {/* Hero section */}
       <div id="home" className="relative -z-10 w-[1500px]">
         <Image
