@@ -5,7 +5,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="flex h-56 flex-row items-center justify-between bg-blue-800 p-20">
+    <div className="flex h-56 flex-row items-center justify-between bg-[#2D50AC] p-20">
       <Image
         src="/logo-full-white.png"
         alt="MDE Community Logo"
@@ -25,9 +25,9 @@ const Footer = () => {
             <Link href="https://www.instagram.com/mdecommunity/">
               <Instagram />
             </Link>
-            {/* <Link href="">
-            <Facebook />
-            </Link> */}
+            <Link href="https://www.facebook.com/medellincommunity/">
+              <Facebook />
+            </Link>
             <Link href="mailto:hello@mdecommunity.com">
               <Mail />
             </Link>

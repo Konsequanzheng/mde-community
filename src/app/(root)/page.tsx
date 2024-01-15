@@ -4,9 +4,9 @@ import { cn } from "~/lib/utils";
 import { Button } from "../_components/ui/button";
 import CommunityCards from "../_components/community-cards";
 import Link from "next/link";
-import NewsletterCard from "../_components/newsletter-card";
 import EventCards from "../_components/event-cards";
 import WikiCards from "../_components/wiki-cards";
+import NewsletterCard from "../_components/newsletter-card";
 
 const urbanist = Urbanist({ weight: "800", subsets: ["latin"] });
 
@@ -98,9 +98,13 @@ export default async function Home() {
         </h1>
 
         <CommunityCards />
+        <Button>
+          <Link href="https://mdecommunity.com/communities/">
+            View all communities
+          </Link>
+        </Button>
+        {/* TODO: Implement all communities page */}
       </div>
-      {/* TODO: Implement all communities page */}
-      {/* <Button>View all communities</Button> */}
       {/* Events section */}
       <div
         id="events"
@@ -199,7 +203,9 @@ export default async function Home() {
         {/* <Swish className="absolute -z-50" /> */}
       </div>
       {/* Newsletter section */}
-      <NewsletterCard />
+      <div className="p-20 pt-32">
+        <NewsletterCard />
+      </div>
     </main>
   );
 }

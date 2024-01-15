@@ -1,6 +1,6 @@
 import React from "react";
-import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const NewsletterCard = () => {
   return (
@@ -16,10 +16,11 @@ const NewsletterCard = () => {
           Hear about the cool stuff happening in Medellín. We'll also be giving
           away some special passes and discounts to some events so stay tuned!
         </div>
-
-        <Input type="email" placeholder="Email address" />
-        <Button variant="tertiary" type="submit" className="font-bold">
-          Keep me updated
+        {/* <Input type="email" placeholder="Email address" /> */}
+        <Button variant="tertiary" type="submit" className="mt-6 font-bold">
+          <Link href="https://mdecommunity.typeform.com/newsletter?typeform-source=mdecommunity.com">
+            Keep me updated
+          </Link>
         </Button>
       </div>
     </div>
