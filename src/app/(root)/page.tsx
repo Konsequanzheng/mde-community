@@ -5,7 +5,6 @@ import Link from "next/link";
 import CommunityCards from "../_components/community-cards";
 import EventCards from "../_components/event-cards";
 import { Button } from "../_components/ui/button";
-import { Input } from "../_components/ui/input";
 import WikiCards from "../_components/wiki-cards";
 import NewsletterCard from "../_components/newsletter-card";
 
