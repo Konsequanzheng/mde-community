@@ -86,7 +86,7 @@ export default async function Home() {
       {/* Communities section */}
       <div
         id="communities"
-        className="-mt-40 flex w-full flex-col items-center pb-32 pt-40 "
+        className="-mt-40 flex w-full flex-col items-center pb-32 pt-40"
       >
         <h1
           className={cn(
@@ -108,7 +108,7 @@ export default async function Home() {
       {/* Events section */}
       <div
         id="events"
-        className="-mt-40 flex w-full flex-col items-center pb-32 pt-40"
+        className="-mt-28 flex w-full flex-col items-center pb-32 pt-28"
       >
         <h1 className={cn("mb-8 text-4xl md:text-6xl", urbanist.className)}>
           See What's Happening
@@ -117,14 +117,14 @@ export default async function Home() {
           <EventCards />
         </div>
         {/* TODO: Implement all events page */}
-        <Button className="z-10 w-fit">
+        <Button>
           <Link href="https://linktr.ee/mdecommunity">View all events</Link>
         </Button>
       </div>
       {/* Blog section */}
       <div
         id="blog"
-        className="-mt-40 flex w-full flex-col justify-center pb-32 pt-40"
+        className="-mt-28 flex w-full flex-col justify-center pb-32 pt-28"
       >
         <div className="mb-8 flex items-center justify-center">
           <h1 className={cn("pr-8 text-4xl md:text-6xl", urbanist.className)}>
@@ -141,7 +141,7 @@ export default async function Home() {
       </div>
       {/* Mission section */}
 
-      <div className="-mt-40 flex w-full flex-col items-center px-5 pb-32 pt-40 lg:px-20">
+      <div className="-mt-28 flex w-full flex-col items-center px-5 pb-32 pt-28 lg:px-20">
         <h1
           className={cn(
             "mb-8 max-w-7xl p-8 text-center text-2xl md:text-4xl",
