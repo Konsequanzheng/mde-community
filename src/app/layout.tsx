@@ -6,6 +6,7 @@ import { cookies } from "next/headers";
 import { TRPCReactProvider } from "~/trpc/react";
 import { cn } from "~/lib/utils";
 import { TailwindIndicator } from "./_components/tailwind-indicator";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const roboto = Roboto({
   weight: ["400"],
@@ -27,7 +28,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth ">
       <body
         className={cn(
-          "bg-background min-h-screen font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased",
           roboto.className,
         )}
       >
@@ -35,6 +36,7 @@ export default function RootLayout({
           {children}
         </TRPCReactProvider>
         <TailwindIndicator />
+        <GoogleAnalytics gaId="G-W573SQ71E8" />
       </body>
     </html>
   );
