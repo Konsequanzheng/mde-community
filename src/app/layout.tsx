@@ -6,6 +6,7 @@ import { cookies } from "next/headers";
 import { TRPCReactProvider } from "~/trpc/react";
 import { cn } from "~/lib/utils";
 import { TailwindIndicator } from "./_components/tailwind-indicator";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const roboto = Inter({
   weight: ["400"],
@@ -35,6 +36,7 @@ export default function RootLayout({
           {children}
         </TRPCReactProvider>
         <TailwindIndicator />
+        <GoogleAnalytics gaId="G-W573SQ71E8" />
       </body>
     </html>
   );

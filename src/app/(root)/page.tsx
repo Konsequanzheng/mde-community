@@ -31,7 +31,7 @@ export default async function Home() {
           height={150}
           width={150}
           alt="Bubble2"
-          className="absolute left-[480px] top-[420px] -z-10"
+          className="absolute left-[480px] top-[420px] -z-10 md:top-[450px]"
         />
         <Image
           src="/bubble3.png"
