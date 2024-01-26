@@ -9,6 +9,10 @@ import WikiCards from "../_components/wiki-cards";
 import NewsletterCard from "../_components/newsletter-card";
 
 const urbanist = Urbanist({ weight: "800", subsets: ["latin"] });
+const sectionHeaderStyle = cn(
+  "text-4xl md:text-6xl text-center mb-8",
+  urbanist.className,
+);
 
 export default async function Home() {
   return (
@@ -20,31 +24,31 @@ export default async function Home() {
           height={280}
           width={280}
           alt="Bubble1"
-          className="absolute left-[300px] top-24 -z-10 sm:left-[280px] md:left-[100px] lg:left-24"
+          className="absolute left-[300px] top-10 -z-10  sm:left-[280px] md:left-[100px] md:top-24 lg:left-24"
         />
         <Image
           src="/bubble2.png"
           height={150}
           width={150}
           alt="Bubble2"
-          className="absolute left-[480px] top-[470px] -z-10"
+          className="absolute left-[480px] top-[420px] -z-10"
         />
         <Image
           src="/bubble3.png"
           height={250}
           width={250}
           alt="Bubble3"
-          className="absolute right-[450px] top-[450px] -z-10 lg:right-96"
+          className="absolute right-[450px] top-[350px] -z-10 md:top-[450px] lg:right-96"
         />
         <Image
           src="/bubble4.png"
           height={200}
           width={200}
           alt="Bubble4"
-          className="absolute right-[380px] top-32 -z-10 sm:right-80 md:right-44 lg:right-40"
+          className="absolute right-[380px] top-20 -z-10 sm:right-80 md:right-44 md:top-32 lg:right-40"
         />
       </div>
-      <div className="relative flex w-full flex-col items-center p-24 pb-52 md:pb-64 lg:pb-96">
+      <div className="relative flex w-full flex-col items-center py-24 pb-52 md:pb-64 lg:pb-96">
         <Image
           src="/logo.png"
           height={120}
@@ -54,7 +58,7 @@ export default async function Home() {
         />
         <h1
           className={cn(
-            "mb-8 text-center text-5xl md:text-6xl",
+            "mb-8 text-center text-4xl md:text-6xl",
             urbanist.className,
           )}
         >
@@ -62,10 +66,10 @@ export default async function Home() {
           <br /> Expats & Locals Meet
         </h1>
         <div className="flex gap-3">
-          <Button variant="secondary" className="font-bold">
+          <Button variant="secondary" className="font-bold" asChild>
             <Link href="#events">View events</Link>
           </Button>
-          <Button>
+          <Button asChild>
             <Link href="#communities" className="font-bold">
               Join a community
             </Link>
@@ -88,17 +92,10 @@ export default async function Home() {
         id="communities"
         className="-mt-40 flex w-full flex-col items-center pb-32 pt-40"
       >
-        <h1
-          className={cn(
-            "mb-8 text-center text-5xl md:text-6xl",
-            urbanist.className,
-          )}
-        >
-          Find Your Community
-        </h1>
+        <h2 className={sectionHeaderStyle}>Find Your Community</h2>
 
         <CommunityCards />
-        <Button>
+        <Button asChild>
           <Link href="https://mdecommunity.com/communities/">
             View all communities
           </Link>
@@ -110,14 +107,12 @@ export default async function Home() {
         id="events"
         className="-mt-28 flex w-full flex-col items-center pb-32 pt-28"
       >
-        <h1 className={cn("mb-8 text-4xl md:text-6xl", urbanist.className)}>
-          See What's Happening
-        </h1>
+        <h2 className={sectionHeaderStyle}>See What's Happening</h2>
         <div className="flex flex-wrap justify-center gap-3 pb-10">
           <EventCards />
         </div>
         {/* TODO: Implement all events page */}
-        <Button>
+        <Button asChild>
           <Link href="https://linktr.ee/mdecommunity">View all events</Link>
         </Button>
       </div>
@@ -126,14 +121,7 @@ export default async function Home() {
         id="blog"
         className="-mt-28 flex w-full flex-col justify-center pb-32 pt-28"
       >
-        <h1
-          className={cn(
-            "mb-8 p-8 text-center text-4xl md:text-6xl",
-            urbanist.className,
-          )}
-        >
-          The Ultimate Medellin Guide 🇨🇴
-        </h1>
+        <h2 className={sectionHeaderStyle}>The Ultimate Medellin Guide 🇨🇴</h2>
         <div className="flex flex-wrap justify-center gap-3">
           <WikiCards />
         </div>
@@ -141,9 +129,9 @@ export default async function Home() {
       {/* Mission section */}
 
       <div className="-mt-28 flex w-full flex-col items-center px-5 pb-32 pt-28 lg:px-20">
-        <h1
+        <h3
           className={cn(
-            "mb-8 max-w-7xl p-8 text-center text-2xl md:text-4xl",
+            "max-w-6xl py-8 text-center text-2xl md:text-4xl",
             urbanist.className,
           )}
         >
@@ -153,7 +141,7 @@ export default async function Home() {
             personal growth,
           </span>{" "}
           community building, and social impact.
-        </h1>
+        </h3>
       </div>
       {/* Donate section */}
       <div
@@ -161,17 +149,17 @@ export default async function Home() {
         className="-mt-40 flex flex-wrap-reverse items-center justify-center gap-20 p-12 pt-40"
       >
         <div className="flex max-w-[580px] flex-col">
-          <h1 className={cn("text-4xl lg:text-6xl", urbanist.className)}>
+          <h2 className={cn("text-4xl lg:text-6xl", urbanist.className)}>
             Your support
             <br />
             goes a long way...
-          </h1>
+          </h2>
           <div className="max-w-[470px] py-5">
             A healthy community is created through meaningful connections in
             safe environments. Support the creation of these spaces by choosing
             to donate for the MDE Community team.
           </div>
-          <Button variant="tertiary">
+          <Button variant="tertiary" asChild>
             <Link
               href="https://mdecommunity.com/fundraiser/"
               target="_blank"

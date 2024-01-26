@@ -6,7 +6,7 @@ const NewsletterCard = () => {
   return (
     <div className="flex max-w-xl justify-center p-5">
       <div className="flex flex-col items-center gap-5 rounded-3xl bg-[#CB525D] p-16">
-        <div className="text-4xl">👋🏽👋🏻👋🏾👋🏼👋🏿</div>
+        <div className="text-center text-4xl">👋🏽👋🏻👋🏾👋🏼👋🏿</div>
         <div className="text-center text-3xl font-bold text-white">
           Sign up to our
           <br />
