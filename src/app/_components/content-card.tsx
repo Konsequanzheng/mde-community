@@ -18,6 +18,7 @@ interface EventCardProps {
   authorImage: string;
   location?: string;
   description: string;
+  date?: string;
   href?: string;
 }
 
@@ -29,6 +30,7 @@ const ContentCard = ({
   authorImage,
   location,
   description,
+  date,
   href,
 }: EventCardProps) => {
   return (
@@ -60,7 +62,8 @@ const ContentCard = ({
             />
             <div>{author}</div>
           </div>
-          {location ? <CardDescription>📍{location}</CardDescription> : null}
+          {location ? <CardDescription>📍 {location}</CardDescription> : null}
+          {date ? <CardDescription>📆 {date}</CardDescription> : null}
         </CardHeader>
         <CardContent className="-mt-4">
           <p>{description}</p>

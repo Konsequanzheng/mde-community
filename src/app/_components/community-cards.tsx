@@ -12,44 +12,44 @@ const communities = [
   {
     title: "👸🏽 Mujeres Group",
     href: "https://mdecommunity.typeform.com/mdemujeres",
-    color: "bg-purple-200",
+    color: "bg-muejeres",
   },
   {
     title: "🍳 Cooking Club",
     href: "https://mdecommunity.typeform.com/cookingclub",
-    color: "bg-yellow-100",
+    color: "bg-cooking",
   },
   {
     title: "⛰️ Hiking",
     href: "https://mdecommunity.typeform.com/hiking",
-    color: "bg-lime-200",
+    color: "bg-hiking",
   },
 
   {
     title: "🖼️ Arts & Culture Club",
     href: "https://mdecommunity.typeform.com/arts-culture",
-    color: "bg-blue-200",
+    color: "bg-arts",
   },
   {
     title: "✍🏻 Writing Club",
     href: "https://mdecommunity.typeform.com/mdewritingclub",
-    color: "bg-[#F3838D]",
+    color: "bg-writing",
   },
   {
     title: "🏳️‍🌈 Pride Zone",
     href: "https://mdecommunity.typeform.com/pridezone",
-    color: "bg-pink-200",
+    color: "bg-pride",
   },
 
   {
     title: "🚺 Women Over 50",
     href: "https://mdecommunity.typeform.com/mdewome50",
-    color: "bg-amber-50",
+    color: "bg-womenover50",
   },
   {
     title: "🚴🏻‍♀️ Cycling Club",
     href: "https://mdecommunity.typeform.com/cyclingclub",
-    color: "bg-orange-300",
+    color: "bg-cycling",
   },
 ];
 
