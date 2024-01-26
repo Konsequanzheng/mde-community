@@ -93,7 +93,6 @@ export default async function Home() {
         className="-mt-40 flex w-full flex-col items-center pb-32 pt-40"
       >
         <h2 className={sectionHeaderStyle}>Find Your Community</h2>
-
         <CommunityCards />
         <Button asChild>
           <Link href="https://mdecommunity.com/communities/">

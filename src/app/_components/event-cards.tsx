@@ -10,6 +10,7 @@ const events = [
       "F*ck the Small Talk is an out-of-the-box social experience where strangers come together for an evening of meaningful, deep, & curious conversations!",
     authorImage: "/epicLlama.jpg",
     tags: ["Fun", "Meetup"],
+    date: "16 February 2024",
     href: "https://www.instagram.com/p/CyvjuRcIT1h/?img_index=7",
   },
   {
@@ -21,6 +22,7 @@ const events = [
       "Let's gather to get to know our friendly neighbours and share a night of some food and conversation.",
     authorImage: "/logo.png",
     tags: ["Fun", "Meetup"],
+    date: "Every other Monday, 5-7pm",
     href: "https://lu.ma/laurelespicnic8",
   },
   {
@@ -32,6 +34,7 @@ const events = [
       "We host Art Therapy sessions as a way to help decompress from life and just a simple way to meet the other people in the community.",
     authorImage: "/logo.png",
     tags: ["Arts & Crafts", "Meetup"],
+    date: "Wednesdays, 5-7pm",
     href: "https://lu.ma/arttherapy10",
   },
 ];
@@ -49,6 +52,7 @@ const EventCards = () => {
           authorImage={event.authorImage}
           location={event.location}
           description={event.description}
+          date={event.date}
           href={event.href}
         />
       ))}
