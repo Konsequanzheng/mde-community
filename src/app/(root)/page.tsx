@@ -134,7 +134,7 @@ export default async function Home() {
             urbanist.className,
           )}
         >
-          We want to create and curate experiences that foster connection,
+          We want to create and curate experiences that foster connection,{" "}
           <span className="bg-amber-100">
             providing opportunities for locals and foreigners alike to promote
             personal growth,
