@@ -161,11 +161,7 @@ export default async function Home() {
             to donate for the MDE Community team.
           </div>
           <Button variant="tertiary" asChild>
-            <Link
-              href="https://mdecommunity.com/fundraiser/"
-              target="_blank"
-              className="font-bold"
-            >
+            <Link href="/fundraiser" target="_blank" className="font-bold">
               Donate here 💜
             </Link>
           </Button>

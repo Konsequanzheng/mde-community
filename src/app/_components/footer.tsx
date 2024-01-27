@@ -5,7 +5,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="flex h-56 flex-row items-center justify-between bg-[#2D50AC] p-20">
+    <div className="flex h-56 w-full flex-row items-center justify-between bg-[#2D50AC] p-20">
       <Image
         src="/logo-full-white.png"
         alt="MDE Community Logo"

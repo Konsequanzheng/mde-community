@@ -17,7 +17,7 @@ const NewsletterCard = () => {
           away some special passes and discounts to some events so stay tuned!
         </div>
         {/* <Input type="email" placeholder="Email address" /> */}
-        <Button variant="tertiary" type="submit" className="mt-6 font-bold">
+        <Button variant="tertiary" type="submit" className="mt-6">
           <Link href="https://mdecommunity.typeform.com/newsletter?typeform-source=mdecommunity.com">
             Keep me updated
           </Link>

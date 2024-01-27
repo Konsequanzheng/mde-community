@@ -14,6 +14,14 @@ const config = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/fundraiser",
+        destination: "/html/Fundraiser – Medellin Community.html",
+      },
+    ];
+  },
 };
 
 export default config;
