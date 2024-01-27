@@ -38,6 +38,7 @@ export default function RootLayout({
         <TailwindIndicator />
         <GoogleAnalytics gaId="GT-M38ZK9W" />
       </body>
+      <GoogleAnalytics gaId="G-W573SQ71E8" />
     </html>
   );
 }

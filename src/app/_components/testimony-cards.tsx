@@ -43,7 +43,7 @@ const testimonies = [
 
 const TestimonyCards = () => {
   return (
-    <div className="flex flex-wrap justify-center gap-5">
+    <div className="grid grid-cols-1 items-center justify-center gap-3 p-5 sm:grid-cols-2">
       {testimonies.map((testimony) => {
         return (
           <TestimonyCard
