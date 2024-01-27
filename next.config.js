@@ -5,6 +5,15 @@
 await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  async rewrites() {
+    return [
+      {
+        source: "/fundraiser",
+        destination: "/html/Fundraiser – Medellin Community.html",
+      },
+    ];
+  },
+};
 
 export default config;

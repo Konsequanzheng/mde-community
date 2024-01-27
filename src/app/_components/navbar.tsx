@@ -16,7 +16,7 @@ const Navbar = () => {
           </Link>
         ))}
         <Button asChild className="font-bold">
-          <Link href="https://mdecommunity.com/fundraiser/" target="_blank">
+          <Link href="/fundraiser" target="_blank">
             Donate
           </Link>
         </Button>
