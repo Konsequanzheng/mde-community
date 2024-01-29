@@ -95,9 +95,7 @@ export default async function Home() {
         <h2 className={sectionHeaderStyle}>Find Your Community</h2>
         <CommunityCards />
         <Button asChild>
-          <Link href="https://mdecommunity.com/communities/">
-            View all communities
-          </Link>
+          <Link href="/communities">View all communities</Link>
         </Button>
         {/* TODO: Implement all communities page */}
       </div>
@@ -161,7 +159,7 @@ export default async function Home() {
             to donate for the MDE Community team.
           </div>
           <Button variant="tertiary" asChild>
-            <Link href="/fundraiser" target="_blank" className="font-bold">
+            <Link href="/fundraiser" className="font-bold">
               Donate here 💜
             </Link>
           </Button>
