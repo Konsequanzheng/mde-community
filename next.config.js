@@ -17,8 +17,8 @@ const config = {
   async rewrites() {
     return [
       {
-        source: "/fundraiser",
-        destination: "/html/Fundraiser – Medellin Community.html",
+        source: "/communities",
+        destination: "/html/Communities – Medellin Community.html",
       },
     ];
   },
