@@ -3,12 +3,12 @@ import ContentCard from "./content-card";
 const events = [
   {
     title: "F*ck the Small Talk",
-    author: "Epic Llama",
+    author: "MDE Community",
     location: "Secret Location",
     src: "/ftst.png",
     description:
       "F*ck the Small Talk is an out-of-the-box social experience where strangers come together for an evening of meaningful, deep, & curious conversations!",
-    authorImage: "/epicLlama.jpg",
+    authorImage: "/logo.png",
     tags: ["Fun", "Meetup"],
     date: "16 February 2024",
     href: "https://www.instagram.com/p/CyvjuRcIT1h/?img_index=7",

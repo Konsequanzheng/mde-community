@@ -63,7 +63,8 @@ export default async function Home() {
           )}
         >
           Where Digital Nomads,
-          <br /> Expats & Locals Meet
+          <br />
+          Expats & Locals Meet
         </h1>
         <div className="flex gap-3">
           <Button variant="secondary" className="font-bold" asChild>
