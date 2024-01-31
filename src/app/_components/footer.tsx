@@ -12,7 +12,7 @@ const Footer = () => {
         width={150}
         height={150}
       />
-      <div className="flex flex-row gap-14 pt-10 text-white">
+      <div className="flex flex-row gap-14 pt-10 text-white sm:pt-0">
         <div className="flex flex-col gap-y-2">
           <div className="font-bold">Links</div>
           <Link href="#communities">Communities</Link>
