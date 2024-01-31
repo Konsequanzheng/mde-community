@@ -5,14 +5,14 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="flex h-56 w-full flex-row items-center justify-between bg-[#2D50AC] p-20">
+    <div className="flex w-full flex-col flex-wrap items-center justify-between bg-[#2D50AC] py-10 sm:flex-row sm:px-20">
       <Image
         src="/logo-full-white.png"
         alt="MDE Community Logo"
         width={150}
         height={150}
       />
-      <div className="flex flex-row gap-x-20 text-white">
+      <div className="flex flex-row gap-14 pt-10 text-white">
         <div className="flex flex-col gap-y-2">
           <div className="font-bold">Links</div>
           <Link href="#communities">Communities</Link>
