@@ -10,8 +10,8 @@ const events = [
       "F*ck the Small Talk is an out-of-the-box social experience where strangers come together for an evening of meaningful, deep, & curious conversations!",
     authorImage: "/logo.png",
     tags: ["Fun", "Meetup"],
-    date: "16 February 2024",
-    href: "https://www.instagram.com/p/CyvjuRcIT1h/?img_index=7",
+    date: "09 February 2024",
+    href: "https://epicllama.typeform.com/ftstmedellin",
   },
   {
     title: "Laureles Neighbourhood Picnic",
