@@ -23,7 +23,7 @@ const events = [
     authorImage: "/logo.png",
     tags: ["Fun", "Meetup"],
     date: "Every other Monday, 5-7pm",
-    href: "https://lu.ma/laurelespicnic8",
+    href: "https://linktr.ee/mdecommunity",
   },
   {
     title: "Art Therapy",
@@ -35,7 +35,7 @@ const events = [
     authorImage: "/logo.png",
     tags: ["Arts & Crafts", "Meetup"],
     date: "Wednesdays, 5-7pm",
-    href: "https://lu.ma/arttherapy10",
+    href: "https://linktr.ee/mdecommunity",
   },
 ];
 
