@@ -37,7 +37,7 @@ export default function RootLayout({
         </TRPCReactProvider>
         <TailwindIndicator />
       </body>
-      <GoogleAnalytics gaId="GT-M38ZK9W" />
+      <GoogleAnalytics gaId="G-W573SQ71E8" />
     </html>
   );
 }
