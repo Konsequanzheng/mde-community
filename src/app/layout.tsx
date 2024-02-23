@@ -8,7 +8,7 @@ import { cn } from "~/lib/utils";
 import { TailwindIndicator } from "./_components/tailwind-indicator";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-const roboto = Inter({
+const inter = Inter({
   weight: ["400"],
   subsets: ["latin"],
 });
@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          roboto.className,
+          inter.className,
         )}
       >
         <TRPCReactProvider cookies={cookies().toString()}>
